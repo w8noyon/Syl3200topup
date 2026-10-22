@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#0b0d1a">
-<title>SM TOPUP</title>
+<title>SYL 3200 TOPUP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -14,7 +14,8 @@
 <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<!-- CSS লিংক -->
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="select-none">
 
@@ -25,7 +26,7 @@
       <div class="login-logo-wrap" id="login-logo-container"></div>
       <div class="login-brand">
         <span class="login-brand-badge" id="auth-brand-badge"><i class="fas fa-bolt"></i> Premium Service</span>
-        <h1 id="auth-site-name" class="login-title">SM TOPUP</h1>
+        <h1 id="auth-site-name" class="login-title">SYL 3200 TOPUP</h1>
         <div class="login-title-divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
       </div>
       <p id="auth-tagline" class="login-sub">Premium Top-Up Service</p>
@@ -46,7 +47,7 @@
         <button type="button" onclick="handleRegister()" class="btn-pink mt-2"><i class="fas fa-user-plus"></i> CREATE ACCOUNT</button>
       </div>
     </div>
-    <p class="text-center text-[10.5px] text-white/40 mt-6">© <span id="auth-footer-year"></span> SM TOPUP · All Rights Reserved</p>
+    <p class="text-center text-[10.5px] text-white/40 mt-6">© <span id="auth-footer-year"></span> SYL 3200 TOPUP · All Rights Reserved</p>
   </div>
 </section>
 
@@ -54,21 +55,23 @@
   <header class="sticky top-0 z-40 px-3 pt-3 pb-2" style="background:linear-gradient(180deg,rgba(244,245,249,.98),rgba(244,245,249,.85) 70%,transparent)">
     <div class="flex justify-between items-center gap-3 px-1">
       <div class="flex items-center gap-2 min-w-0">
-        <img id="header-logo-img" src="" class="h-8 object-contain max-w-[120px]" style="display:none">
-        <h1 id="header-brand-text" class="text-[15px] font-black text-[#0b0d1a] f-display truncate" style="display:none">SM TOPUP</h1>
+        <img id="header-logo-img" src="" class="h-10 object-contain max-w-[130px]" style="display:none">
+        <h1 id="header-brand-text" class="text-[15px] font-black text-[#0b0d1a] f-display truncate" style="display:none">SYL 3200 TOPUP</h1>
       </div>
       <div class="flex items-center gap-2">
         <button type="button" onclick="showSec('addmoney')" class="flex items-center gap-1.5 bg-gradient-to-r from-[#4338ca] to-[#7c3aed] text-white px-3 py-2 rounded-full shadow-md active:scale-95">
           <i class="fas fa-wallet text-[11px]"></i><span class="text-[12.5px] font-bold">৳<span id="header-balance">0</span></span>
         </button>
-        <button type="button" onclick="showSec('account')" class="w-9 h-9 rounded-full bg-gradient-to-br from-[#6366f1] to-[#a855f7] flex items-center justify-center text-white font-black shadow-md border-2 border-white text-[12px] active:scale-95"><span id="header-avatar">U</span></button>
+        <button type="button" onclick="showSec('account')" class="w-9 h-9 rounded-full bg-gradient-to-br from-[#6366f1] to-[#a855f7] flex items-center justify-center text-white font-black shadow-md border-2 border-white text-[12px] active:scale-95 overflow-hidden">
+          <span id="header-avatar" class="w-full h-full flex items-center justify-center rounded-full overflow-hidden">U</span>
+        </button>
       </div>
     </div>
     <div id="notice-bar" class="mt-2">
       <div class="notice-bar-wrap">
         <div class="notice-bar-dot live-dot"></div>
         <span class="text-[9.5px] font-extrabold text-white/80 uppercase tracking-widest whitespace-nowrap">Notice</span>
-        <div class="notice-scroll-wrapper"><div id="notice-text" class="notice-scroll-text">Welcome to SM TOPUP</div></div>
+        <div class="notice-scroll-wrapper"><div id="notice-text" class="notice-scroll-text">Welcome to SYL 3200 TOPUP</div></div>
         <button type="button" onclick="hideNotice()" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white flex-shrink-0"><i class="fas fa-xmark text-[10px]"></i></button>
       </div>
     </div>
@@ -79,7 +82,7 @@
     <section id="home-sec" class="sect">
       <div class="hero-title-bar">
         <div class="hero-title-content">
-          <div class="hero-title-txt" id="hero-title-txt">Welcome to <span id="home-site-name">SM TOPUP</span></div>
+          <div class="hero-title-txt" id="hero-title-txt">Welcome to <span id="home-site-name">SYL 3200 TOPUP</span></div>
           <div class="hero-title-sub" id="hero-title-sub">Instant &amp; trusted game top-up service</div>
         </div>
       </div>
@@ -114,7 +117,7 @@
                 <div><p id="ft-support-title" style="font-size:12px;font-weight:800;color:#fff">Help line [9AM-12PM]</p><p id="ft-support-subtitle" style="font-size:10.5px;color:rgba(255,255,255,.6);margin-top:2px">টেলিগ্রামে সাপোর্ট</p></div>
               </div>
             </a>
-            <div class="footer-copyright">© <span id="footer-site-name">SM TOPUP</span> <span id="footer-year"></span> · All Rights Reserved</div>
+            <div class="footer-copyright">© <span id="footer-site-name">SYL 3200 TOPUP</span> <span id="footer-year"></span> · All Rights Reserved</div>
           </div>
         </div>
       </div>
@@ -189,6 +192,7 @@
             <div class="profile-email" id="prof-email">user@example.com</div>
             <div class="profile-status-badge"><i class="fas fa-circle" style="font-size:6px"></i> Active Account</div>
           </div>
+          <button type="button" onclick="openEditProfile()" class="profile-edit-btn"><i class="fas fa-pen"></i></button>
         </div>
         <div class="profile-grid-info">
           <div class="pg-item"><div class="pg-lbl">Support PIN</div><div class="pg-val mono" id="prof-pin">-----</div></div>
@@ -241,7 +245,7 @@
         <div style="flex:1;text-align:left"><p style="font-size:13px;font-weight:800;color:#e11d48">Log Out</p><p style="font-size:10.5px;color:#9ca3af;margin-top:2px">Sign out from your account</p></div>
         <i class="fas fa-chevron-right" style="color:#fecdd3;font-size:12px"></i>
       </button>
-      <div style="text-align:center;font-size:10px;color:#9ca3af;padding:20px 0">© <span id="footer-site-name-2">SM TOPUP</span> <span id="footer-year-2"></span></div>
+      <div style="text-align:center;font-size:10px;color:#9ca3af;padding:20px 0">© <span id="footer-site-name-2">SYL 3200 TOPUP</span> <span id="footer-year-2"></span></div>
     </section>
 
     <!-- TOPUP -->
@@ -357,8 +361,8 @@
   </header>
   <div class="avc-body">
     <div class="avc-banner">
-      <img src="https://placehold.co/600x340/1e293b/ffffff?text=SM+TOPUP+%0AACCOUNT+CHECKER" alt="Banner">
-      <div class="avc-banner-txt"><h2>SM TOPUP</h2><p>Free Fire Account Info</p></div>
+      <img src="https://placehold.co/600x340/1e293b/ffffff?text=SYL+3200+TOPUP+%0AACCOUNT+CHECKER" alt="Banner">
+      <div class="avc-banner-txt"><h2>SYL 3200 TOPUP</h2><p>Free Fire Account Info</p></div>
     </div>
     <div class="avc-search">
       <div class="avc-input-wrap"><i class="fas fa-search"></i><input type="text" id="avc-uid-input" class="avc-input" placeholder="Enter Free Fire UID" inputmode="numeric" pattern="[0-9]*"></div>
@@ -476,6 +480,36 @@
   </div>
 </div>
 
+<!-- EDIT PROFILE MODAL -->
+<div id="edit-profile-modal" class="hidden modal-overlay center">
+  <div class="modal-content center pop-in">
+    <div class="modal-header"><div class="modal-title"><i class="fas fa-user-pen"></i> Edit Profile</div><button type="button" onclick="closeEditProfile()" class="modal-close"><i class="fas fa-xmark text-xs"></i></button></div>
+    <div class="modal-body">
+      <div class="text-center mb-4">
+        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden border-4 border-[#eceef5] bg-gradient-to-br from-[#4338ca] to-[#a855f7] flex items-center justify-center text-white font-black text-2xl" id="edit-prof-avatar">U</div>
+      </div>
+      <div class="mb-3">
+        <label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5 pl-1">Profile Picture URL</label>
+        <input type="text" id="edit-prof-pic" class="inp" placeholder="https://...">
+        <p class="text-[10px] text-gray-400 mt-1.5 pl-1">Paste an image URL for your profile picture</p>
+      </div>
+      <div class="mb-3">
+        <label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5 pl-1">Full Name</label>
+        <input type="text" id="edit-prof-name" class="inp" placeholder="Your name">
+      </div>
+      <div class="mb-3">
+        <label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5 pl-1">Phone Number</label>
+        <input type="tel" id="edit-prof-phone" class="inp" placeholder="01XXXXXXXXX">
+      </div>
+      <div class="mb-4">
+        <label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5 pl-1">Bio</label>
+        <textarea id="edit-prof-bio" rows="2" class="inp" placeholder="Tell something about yourself..."></textarea>
+      </div>
+      <button type="button" onclick="saveProfile()" class="btn-navy"><i class="fas fa-save"></i> Save Changes</button>
+    </div>
+  </div>
+</div>
+
 <!-- PROMO -->
 <div id="promo-modal" class="hidden modal-overlay center">
   <div class="promo-modal-content">
@@ -493,6 +527,7 @@
   </div>
 </div>
 
-<script src="js/script.js"></script>
+<!-- JS লিংক -->
+<script src="./js/script.js"></script>
 </body>
 </html>
